@@ -1,13 +1,13 @@
 function face_pts = correspondences(img)
 % Load an image, input your API_KEY & API_SECRET
-API_KEY = 'a82a960cad1b5bfcca7d845747b3f572';
-API_SECRET = '66rfNGmaWzOKcoeEZ4uiRFAd5Z8d0hXZ';
+API_KEY = '65cbc7624e72c62dc00f75ecd8285098';
+API_SECRET = 'PMvnk9BBAcKdEFIiaVarkOzikwxO9phv';
 
 % If you have chosen Amazon as your API sever and 
 % changed API_KEY&API_SECRET into yours, 
 % pls reform the FACEPP call as following :
 % api = facepp(API_KEY, API_SECRET, 'US')
-api = facepp(API_KEY, API_SECRET, 'US');
+api = facepp(API_KEY, API_SECRET, 'CN');
 
 % Detect faces in the image, obtain related information (faces, img_id, img_height, 
 % img_width, session_id, url, attributes)

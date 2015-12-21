@@ -2,9 +2,9 @@ replacement  = 'replacement.jpg'; %your face
 im2 = imread(replacement);
 replacement_pts = correspondences(replacement);
 im2_pts = [replacement_pts{1,1}.x replacement_pts{1,1}.y];
-i = 40;
-num_frames = 80; %remember to change for each video
-fname = 'medium3_rep2_test.avi';
+i = 1;
+num_frames = 50; %remember to change for each video
+fname = 'medium3_rep_test.avi';
 h_avi = VideoWriter(fullfile(fname));
 h_avi.FrameRate = 20;
 h_avi.open();
@@ -16,7 +16,7 @@ for i = i:num_frames
     if (size(target_pts,1)==0)
         [visiblePoints, im1_pts] = KLT_tracking(prev_pts, prev_im, im1);
         
-        %[im2, im2_pts] = findBestfit(im1_pts);
+        [im2, im2_pts] = findBestfit(im1, im1_pts);
         [im1r, im1c, ~] = size(im1);
         [im2r, im2c, ~] = size(im2);
         if ~isequal(size(im1),size(im2))
